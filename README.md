@@ -1,2 +1,3 @@
-# r-programming-assignments
-Repository for R Programming Assignments
+Name: Dominik Németh
+Course: LIS4370
+Description: Repository for R Programming Assignments
