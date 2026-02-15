@@ -1,0 +1,43 @@
+```{r}
+A <- matrix(1:100, nrow=10)
+B <- matrix(1:1000, nrow=10)
+
+cat("Dimensions of A:\n")
+print(dim(A))
+
+cat("\nDimensions of B:\n")
+print(dim(B))
+
+detA <- det(A)
+cat("\nDeterminant of A:\n")
+print(detA)
+
+cat("\nInverse of A:\n")
+if(detA == 0){
+  print("A has no inverse (determinant = 0).")
+} else {
+  print(solve(A))
+}
+
+cat("\nDeterminant and Inverse of B:\n")
+if(nrow(B) != ncol(B)){
+  print("B is not square. Determinant and inverse are not defined.")
+} else {
+  print(det(B))
+  print(solve(B))
+}
+
+B10 <- B[, 1:10]
+detB10 <- det(B10)
+
+cat("\nUsing first 10 columns of B (B10):\n")
+cat("Determinant of B10:\n")
+print(detB10)
+
+cat("\nInverse of B10:\n")
+if(detB10 == 0){
+  print("B10 has no inverse (determinant = 0).")
+} else {
+  print(solve(B10))
+}
+```
